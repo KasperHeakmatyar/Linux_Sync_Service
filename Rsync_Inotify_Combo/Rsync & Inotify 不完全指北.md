@@ -99,7 +99,7 @@ rsync -avz /test/sync/ root@192.168.1.2:/backup/
 rsync -avz root@192.168.1.2:/test/sync/ /backup/
 ```
 
-需要镜像功能需要加上"--delete"参数
+镜像功能需要加上"--delete"参数
 
 ------
 
