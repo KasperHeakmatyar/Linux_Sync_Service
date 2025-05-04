@@ -77,3 +77,31 @@ rsync -avz user@192.168.1.2:/src/directory/ /dest/directory/
 rsync -av --delete /usr/local/nginx-1.8.0/html /usr/local/nginx-1.8.0/backup/
 ```
 
+------
+
+## 同步实例
+
+将node1本地的/test/sync/的内容同步到/backup/
+
+```ini
+rsync -av /test/sync/ /backup/
+```
+
+将node1的/test/sync/的内容同步到node2的/backup/中
+
+```ini
+rsync -avz /test/sync/ root@192.168.1.2:/backup/
+```
+
+将node2的/test/sync/的内容同步到本地node1的/backup/
+
+```ini
+rsync -avz root@192.168.1.2:/test/sync/ /backup/
+```
+
+需要镜像功能需要加上"--delete"参数
+
+------
+
+## Inotify
+
